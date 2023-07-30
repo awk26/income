@@ -1,0 +1,23 @@
+.side{
+    width: 15%;
+    height: 600px;
+    background-color: aqua;
+    position: fixed;
+}
+
+.side a{
+    color: black;
+    margin-left: 10px;
+    letter-spacing: 2px;
+
+}
+
+.side a:hover{
+    background-color: antiquewhite;
+    color: black;
+
+}
+
+.main{
+    margin-left: 500px;
+}

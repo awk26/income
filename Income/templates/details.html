@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    {%extends 'sidebar.html'%}
+
+
+    {%block "body"%}    
+    <table border="1px" align="center" >
+        <tr>
+            <th>Income</th>
+            <th>Income Type</th>
+            <th>Incone Date</th>
+            <th>Descrption</th>
+            <th>user</th>
+            <th colspan="2">Action</th>
+        </tr>
+        {% for i in data %}
+        <tr>
+            <td>{{i.income}}</td>
+            <td>{{i.income_type}}</td>
+            <td>{{i.income_date}}</td>
+            <td>{{i.description}}</td>
+            <td>{{i.user}}</td>
+            <td><a href="{%url 'income:delete' i.id%}">Delete</a></td>
+            <td><a href="{%url 'income:edit' i.id%}">Edit</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+    {%endblock%}
+</body>
+</html>
